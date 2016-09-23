@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RC Hódmezővásárhely</title>
+   <meta charset="UTF-8">
+
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" type="text/css" href="css/rotary_competition.css">
+  <script src="js/rotary_competition.js"></script>
+</head>
+<body onload="initHome()">
+  <header>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-3"><img class="img-responsive" src="img/head_left.jpg" ></div>
+      <div class="col-xs-6"><img class="img-responsive" src="img/head_mid.png" ></div>
+      <div class="col-xs-3"><img class="img-responsive" src="img/head_right.jpg" ></div>
+    </div>
+  </div>
+  </header>
+  <article>
+    <!-- Nav tabs -->
+    <ul id="menu" class="nav nav-tabs"  role="tablist">
+      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Pályázat kiírás</a></li>
+      <li role="presentation"><a href="#competition" aria-controls="competition" role="tab" data-toggle="tab">Ösztöndíj pályázat</a></li>
+      <li role="presentation"><a href="#download" aria-controls="download" role="tab" data-toggle="tab">Letölthető anyagok</a></li>
+    </ul>
+
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <div role="tabpanel" class="tab-pane active" id="home">
+         <iframe id="competition_iframe" src="competition.html"></iframe>
+      </div>
+      <div role="tabpanel" class="tab-pane" id="competition">
+
+         <form id="competition_form">
+
+          <h3>1. Személyes adatok</h3> <hr class="separator">
+
+          <div class="form-group">
+            <label for="name">Pályázó neve:</label>
+            <input type="text" class="form-control" name="name" id="name">
+          </div>
+
+          <div class="form-group">
+            <label for="mothers_name">Anyja neve:</label>
+            <input type="text" class="form-control" name="mothers_name" id="mothers_name">
+          </div>
+
+          <div class="form-group">
+            <label for="birthplace">Születési helye:</label>
+            <input type="text" class="form-control" name="birthplace" id="birthplace">
+          </div>
+
+          <div class="form-group">
+            <label for="birth_date">Születési ideje:</label>
+            <input type="text" class="form-control" name="birth_date" id="birth_date">
+          </div>
+
+          <div class="form-group">
+            <label for="address">Lakcíme:</label>
+            <input type="text" class="form-control" name="address" id="address">
+          </div>
+
+          <div class="form-group">
+            <label for="contact">Elérhetősége (e-mail, tel.):</label>
+            <input type="text" class="form-control" name="contact" id="contact">
+          </div>
+
+          <div class="form-group">
+            <label for="secondary_school">Középiskola megnevezése:</label>
+            <input type="text" class="form-control" name="secondary_school" id="secondary_school">
+          </div>
+
+          <div class="form-group">
+            <label for="secondary_school_address">Középiskola címe:</label>
+            <input type="text" class="form-control" name="secondary_school_address" id="secondary_school_address">
+          </div>
+
+          <div class="form-group">
+            <label for="class">Évfolyam, osztály megnevezése:</label>
+            <input type="text" class="form-control" name="class" id="class">
+          </div>
+
+          <div class="form-group">
+            <label for="head_teacher">Osztályfőnök neve:</label>
+            <input type="text" class="form-control" name="head_teacher" id="head_teacher">
+          </div>
+
+          <h3>2. Tanulmányi adatok</h3> <hr class="separator">
+
+          <div class="form-group">
+            <label for="head_teacher">Előző év végi tanulmányi átlag:</label>
+            <input type="text" class="form-control" name="grade_average" id="grade_average">
+          </div>
+
+          <div class="form-group">
+            <label for="talen">Osztályfőnök indoklása, igazolása:</label>
+            <textarea class="form-control" rows="5" name="head_teacher_certificate" id="head_teacher_certificate"></textarea>
+          </div>
+
+          <h3>3. Rászorultság</h3> <hr class="separator">
+
+          <div class="form-group">
+            <label for="talen">Osztályfőnök indoklása, igazolása:</label>
+            <textarea class="form-control" rows="5" name="certificate" id="certificate"></textarea>
+          </div>
+
+          <h3>4. Tehetség</h3> <hr class="separator">
+
+          <div class="form-group">
+            <label for="talent">Miben tehetségesebb kortársainál?</label>
+            <textarea class="form-control" rows="5" name="talent" id="talent"></textarea>
+          </div>
+
+           <div class="form-group">
+            <label for="achievements">Elért eredmények, amiben tehetségesnek érzem magam (az elmúlt 2 év eredményei):</label>
+            <textarea class="form-control" rows="5" name="achievements" id="achievements"></textarea>
+          </div>
+
+           <div class="form-group">
+            <label for="achievements_certificate">Szaktanár, mentor, edző indoklása, igazolása:</label>
+            <textarea class="form-control" rows="5" name="achievements_certificate" id="achievements_certificate"></textarea>
+          </div>
+
+          <h3>5. Mire fordítaná az ösztöndíjat?</h3> <hr class="separator">
+
+           <div class="form-group">
+            <textarea class="form-control" rows="5" name="cause" id="cause"></textarea>
+          </div>
+
+          <h3>6. Egyéb/Vers</h3> <hr class="separator">
+
+           <div class="form-group">
+            <textarea class="form-control" rows="5" name="comment" id="comment"></textarea>
+          </div>
+
+          <hr class="separator">
+
+          <button id="print" type="button" class="btn btn-success">Nyomtatás</button>
+          <button id="generate_link" type="button" class="btn btn-default" data-toggle="modal" data-target="#link_generator">Link a kitöltés későbbi folytatásához</button>
+        </form>
+
+      </div>
+      <div role="tabpanel" class="tab-pane" id="download">
+        <ul class="list-group">
+          <li class="list-group-item"><a href="doc/PALYAZATI_KIIRAS.docx">Pályázati Kiírás</a></li>
+          <li class="list-group-item"><a href="doc/Osztondij_2016-2017_tanev.docx">Ösztöndíj 2016-2017 tanév</a></li>
+        </ul>
+      </div>
+    </div>
+  </article>
+
+  <!-- Modal -->
+  <div class="modal fade" id="link_generator" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h4 class="modal-title" id="myModalLabel">Link a kitöltés későbbi folytatásához</h4>
+        </div>
+        <div class="modal-body">
+          <div class="alert alert-info">
+            <strong>Fontos!</strong> A kapott link a jelenlegi állapotot állítja vissza!
+          </div>
+          <div id="generated_link">a link should be here...</div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Bezárás</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+</html>
