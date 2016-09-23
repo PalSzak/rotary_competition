@@ -60,11 +60,11 @@ function initHome() {
   })
 
   $('#generate_link').click( function() {
-    $('#generated_link').text("http://" + window.location.host + "/?" + serializeForm() );
+    $('#generated_link').text("http://" + window.location.host + window.location.pathname + "/?" + serializeForm() );
   })
 
   $('#print').click( function() {
-    window.location.replace("http://" + window.location.host + "/print.html?" + serializeForm());
+    window.location.replace("http://" + window.location.host + window.location.pathname + "/print.html?" + serializeForm());
   });
 }
 
