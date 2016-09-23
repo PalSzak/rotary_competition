@@ -60,7 +60,7 @@ function initHome() {
   })
 
   $('#generate_link').click( function() {
-    $('#generated_link').text("http://" + window.location.host + window.location.pathname + "/?" + serializeForm() );
+    $('#generated_link').val("http://" + window.location.host + window.location.pathname + "/?" + serializeForm() );
   })
 
   $('#print').click( function() {
