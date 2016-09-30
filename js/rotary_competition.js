@@ -33,7 +33,7 @@ function prepopulateForm(submittedValues) {
   jQuery.each( submittedValues, function(idx, value){
     var element = $('#' + value);
     if(element.is('span')){
-      element.text(prepareString(submittedValues[value]));
+      element.html(prepareString(submittedValues[value]).replace(/\n/g, '<br/>'));
     } else {
       element.val(prepareString(submittedValues[value]));
     }
@@ -60,14 +60,15 @@ function initHome() {
   })
 
   $('#generate_link').click( function() {
-    $('#generated_link').val("http://" + window.location.host + window.location.pathname + "/?" + serializeForm() );
+    $('#generated_link').val("http://" + window.location.host + window.location.pathname + "?" + serializeForm() );
   })
 
   $('#print').click( function() {
-    window.location.replace("http://" + window.location.host + window.location.pathname + "/print.html?" + serializeForm());
+    window.location.replace("http://" + window.location.host + window.location.pathname + "print.html?" + serializeForm());
   });
 }
 
 function initPrint() {
   prepopulateForm(getUrlVars());
+  window.print();
 }
